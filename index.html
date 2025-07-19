@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+ 
+  function pick(val){
+     document.getElementById("in1").value +=val;
+  }
+  function solve(){
+    var x = document.getElementById("in1").value;
+    var y=eval(x);
+    document.getElementById("in1").value=y;
+  }
+  function clr(){
+    document.getElementById("in1").value="";
+  }
+
+</script>
+<h1>CALCULATOR USING JAVASCRIPT</h1>
+    <div class="calculator">
+        <input type="text" placeholder="0" id="in1">
+        <div>
+            <button class="dif" onclick="clr()">AC</button>
+            <button class="dif" onclick="clr()">C</button>
+            <button class="dif" onclick="pick('/')">/</button>
+            <button class="dif" onclick="pick('%')">%</button>
+        </div>
+        <div>
+            <button onclick="pick(7)">7</button>
+            <button onclick="pick(8)">8</button>
+            <button onclick="pick(9)">9</button>
+            <button class="dif" onclick="pick('*')">*</button>
+        </div>
+        <div>
+            <button onclick="pick(4)">4</button>
+            <button onclick="pick(5)">5</button>
+            <button onclick="pick(6)">6</button>
+            <button class="dif" onclick="pick('-')">-</button>
+        </div>
+        <div>
+            <button onclick="pick(1)">1</button>
+            <button onclick="pick(2)">2</button>
+            <button onclick="pick(3)">3</button>
+            <button class="dif" onclick="pick('+')">+</button>
+        </div>
+        <div>
+            <button onclick="pick(00)">00</button>
+            <button onclick="pick(0)">0</button>
+            <button onclick="pick('.')">.</button>
+            <button class="dif" onclick="solve()">=</button>
+        </div>
+    </div>
+</body>
+</html>
